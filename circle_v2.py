@@ -79,7 +79,7 @@ def move_linear_simple(scf):
         start = time.time()
         while (time.time() - start) < run_time:
             time.sleep(0.2)
-            xb = [-0.7,0.7]
+            xb = [-0.7,0]
             global position_estimate
             omega = u_t(position_estimate[0:-1],xb,position_estimate[2] + start_angle)
             radius_t = np.abs(v/omega)
@@ -198,8 +198,8 @@ if __name__ == '__main__':
 
         move_linear_simple(scf)
         logconf.stop()
-        np.save("cf_circle_v3.npy",np.array(cf_data_log))
+        np.save("cf_circle_v4.npy",np.array(cf_data_log))
         print(control_signal)
-        np.save("control_signals_v3.npy",np.array(control_signal))
+        np.save("control_signals_v4.npy",np.array(control_signal))
 
 

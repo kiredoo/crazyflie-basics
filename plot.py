@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-aa = np.load("/home/turtlebot/Sudhanshu_shankar/cf_code/cf_circle_v3.npy")
+aa = np.load("/home/turtlebot/Sudhanshu_shankar/cf_code/cf_circle_v4.npy")
 traj = np.load("/home/turtlebot/Sudhanshu_shankar/cf_code/gt.npy")
 aa = aa.T
 # plt.plot(aa[2,:])
