@@ -32,9 +32,7 @@ def param_deck_flow(_, value_str):
     else:
         print('Deck is NOT attached!')
 
-
-
-if __name__ == '__main__':
+def main(args=None):
     cflib.crtp.init_drivers()
 
     with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
@@ -48,3 +46,7 @@ if __name__ == '__main__':
 
         take_off_simple(scf)
 
+
+
+if __name__ == '__main__':
+    main()
