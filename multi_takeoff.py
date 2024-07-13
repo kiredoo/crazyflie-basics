@@ -20,11 +20,26 @@ DEFAULT_HEIGHT = 0.5
 deck_attached_event = Event()
 
 logging.basicConfig(level=logging.ERROR)
+position_estimate = [0, 0, 0]
 
-def take_off_simple(scf):
+def log_pos_callback(timestamp, data, logconf):
+    # print(data)
+    global position_estimate
+    position_estimate[0] = - data['stateEstimate.y']
+    position_estimate[1] = data['stateEstimate.x']
+    position_estimate[2] = data['stateEstimate.yaw'] + 180
+def take_off_simple1(scf):
+    global position_estimate
+    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
+        time.sleep(3)
+        print(position_estimate)
+        mc.stop()
+
+def take_off_simple2(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         time.sleep(3)
         mc.stop()
+
 
 def param_deck_flow(_, value_str):
     value = int(value_str)
@@ -59,12 +74,18 @@ def loop3():
             print('No flow deck detected!')
             sys.exit(1)
 
-        take_off_simple(scf)
+        take_off_simple1(scf)
 
 def loop4():
     global shared_variable
     
     with SyncCrazyflie(URI2, cf=Crazyflie(rw_cache='./cache')) as scf:
+        logconf = LogConfig(name='Position', period_in_ms=10)
+        logconf.add_variable('stateEstimate.x', 'float')
+        logconf.add_variable('stateEstimate.y', 'float')
+        logconf.add_variable('stateEstimate.yaw', 'float')
+        scf.cf.log.add_config(logconf)
+        logconf.data_received_cb.add_callback(log_pos_callback)
 
         scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
                                          cb=param_deck_flow)
@@ -72,8 +93,9 @@ def loop4():
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
-
-        take_off_simple(scf)
+        logconf.start()
+        take_off_simple2(scf)
+        logconf.stop()
 cflib.crtp.init_drivers()
 
 # Creating threads
