@@ -14,4 +14,4 @@ The paper presents a distributed controller for unicycle point sized vehicles to
 
 1. Does not depend on the number of agents
 2. Can follow moving beacons
-
+3. Avoids agent collisions who are within the control law
