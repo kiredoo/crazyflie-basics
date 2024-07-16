@@ -38,8 +38,7 @@ def simple_param_async(scf, groupstr, namestr):
     cf = scf.cf
     full_name = groupstr + '.' + namestr
 
-    cf.param.add_update_callback(group=groupstr, name=namestr,
-                                 cb=param_stab_est_callback)
+    cf.param.add_update_callback(group=groupstr, name=namestr,cb=param_stab_est_callback)
     time.sleep(1)
     cf.param.set_value(full_name, 2)
     time.sleep(1)

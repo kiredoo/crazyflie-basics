@@ -32,11 +32,6 @@ def log_pos_callback(timestamp, data, logconf):
     position_estimate[0] = data['stateEstimate.x']
     position_estimate[1] = data['stateEstimate.y']
 
-def take_off_simple(scf):
-    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
-        time.sleep(3)
-        mc.stop()
-
 def param_deck_flow(_, value_str):
     value = int(value_str)
     print(value)
@@ -46,7 +41,7 @@ def param_deck_flow(_, value_str):
     else:
         print('Deck is NOT attached!')
 
-def move_linear_simple(scf):
+def zig_zag(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         time.sleep(1)
         mc.circle_left(0.5,0.4,45)
@@ -65,8 +60,7 @@ if __name__ == '__main__':
 
     with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
 
-        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                         cb=param_deck_flow)
+        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',cb=param_deck_flow)
         time.sleep(1)
 
         logconf = LogConfig(name='Position', period_in_ms=10)
@@ -81,7 +75,7 @@ if __name__ == '__main__':
 
         logconf.start()
 
-        move_linear_simple(scf)
+        zig_zag(scf)
         logconf.stop()
         cf_data_log = np.array(cf_data_log)
         np.save("cf_data_log.npy",cf_data_log)

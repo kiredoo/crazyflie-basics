@@ -10,18 +10,13 @@ from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.utils import uri_helper
 
-URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E704')
+URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E708')
 
 DEFAULT_HEIGHT = 0.5
 
 deck_attached_event = Event()
 
 logging.basicConfig(level=logging.ERROR)
-
-def take_off_simple(scf):
-    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
-        time.sleep(3)
-        mc.stop()
 
 def param_deck_flow(_, value_str):
     value = int(value_str)
@@ -32,7 +27,16 @@ def param_deck_flow(_, value_str):
     else:
         print('Deck is NOT attached!')
 
-def main(args=None):
+def move_nw(scf):
+    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
+        time.sleep(1)
+        mc.up(0.5)
+        time.sleep(3)
+        mc.start_linear_motion(0.5,0.5,0,0)
+        time.sleep(1.5)
+        mc.stop()
+
+if __name__ == '__main__':
     cflib.crtp.init_drivers()
 
     with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
@@ -44,9 +48,4 @@ def main(args=None):
             print('No flow deck detected!')
             sys.exit(1)
 
-        take_off_simple(scf)
-
-
-
-if __name__ == '__main__':
-    main()
+        move_nw(scf)
