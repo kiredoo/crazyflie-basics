@@ -1,10 +1,10 @@
-# Crazyflie 2.1 Documentation for MURO LAB
+# Crazyflie 2.1 [ROS packages] Documentation for MURO LAB
 
 > Author : Sudhanshu Shankar
 
 ## Cyclic pursuit paper
 
-The paper can be forund here : [Collective circular motion of multi-vehicle systems](https://www.sciencedirect.com/science/article/pii/S0005109808002951)
+The paper can be found here : [Collective circular motion of multi-vehicle systems](https://www.sciencedirect.com/science/article/pii/S0005109808002951)
 
 ### Summary : 
 

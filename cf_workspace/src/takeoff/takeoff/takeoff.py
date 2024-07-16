@@ -10,7 +10,7 @@ from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.utils import uri_helper
 
-URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E704')
+URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E702')
 
 DEFAULT_HEIGHT = 0.5
 
@@ -25,7 +25,6 @@ def take_off_simple(scf):
 
 def param_deck_flow(_, value_str):
     value = int(value_str)
-    print(value)
     if value:
         deck_attached_event.set()
         print('Deck is attached!')
