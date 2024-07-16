@@ -12,7 +12,7 @@ from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.utils import uri_helper
 
-URI1 = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E710')
+URI1 = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E702')
 URI2 = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E711')
 
 DEFAULT_HEIGHT = 0.5
@@ -28,14 +28,14 @@ def log_pos_callback(timestamp, data, logconf):
     position_estimate[0] = - data['stateEstimate.y']
     position_estimate[1] = data['stateEstimate.x']
     position_estimate[2] = data['stateEstimate.yaw'] + 180
-def take_off_simple1(scf):
+def take_off_1(scf):
     global position_estimate
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         time.sleep(3)
         print(position_estimate)
         mc.stop()
 
-def take_off_simple2(scf):
+def take_off_2(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         time.sleep(3)
         mc.stop()
@@ -61,22 +61,21 @@ frequency1 = 1  # Frequency for the first loop (in Hz)
 frequency2 = 2  # Frequency for the second loop (in Hz)
 
 
-def loop3():
+def cf1():
     global shared_variable
     # cflib.crtp.init_drivers()
 
     with SyncCrazyflie(URI1, cf=Crazyflie(rw_cache='./cache')) as scf:
 
-        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                         cb=param_deck_flow)
+        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',cb=param_deck_flow)
         time.sleep(1)
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
 
-        take_off_simple1(scf)
+        take_off_1(scf)
 
-def loop4():
+def cf2():
     global shared_variable
     
     with SyncCrazyflie(URI2, cf=Crazyflie(rw_cache='./cache')) as scf:
@@ -87,20 +86,19 @@ def loop4():
         scf.cf.log.add_config(logconf)
         logconf.data_received_cb.add_callback(log_pos_callback)
 
-        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                         cb=param_deck_flow)
+        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',cb=param_deck_flow)
         time.sleep(1)
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
         logconf.start()
-        take_off_simple2(scf)
+        take_off_2(scf)
         logconf.stop()
 cflib.crtp.init_drivers()
 
 # Creating threads
-thread1 = threading.Thread(target=loop4)
-thread2 = threading.Thread(target=loop3)
+thread1 = threading.Thread(target=cf1)
+thread2 = threading.Thread(target=cf2)
 
 # Starting threads
 thread1.start()

@@ -1,4 +1,4 @@
-# Crazyflie 2.1 Documentation for MURO LAB
+# Crazyflie 2.1 [Python scripts] Documentation for MURO LAB
 
 > Author : Sudhanshu Shankar
 
