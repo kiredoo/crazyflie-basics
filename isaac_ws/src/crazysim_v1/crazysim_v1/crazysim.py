@@ -38,8 +38,8 @@ class LivePlotNode(Node):
         self.subscription  # prevent unused variable warning
 
         # Initialize the plot
-        self.x = 0.0
-        self.y = 0.0
+        self.x = [0.0]
+        self.y = [0.0]
         self.fig, self.ax = plt.subplots()
         self.sc = self.ax.scatter(self.x, self.y)
         self.ax.set_xlim(-10, 10)
@@ -65,10 +65,17 @@ class LivePlotNode(Node):
         # publisher publishes theta dot
         # needs to be updated
     def update_plot(self):
+        
         #Update the scatter plot with new coordinates
-        self.sc.set_offsets(np.c_[[self.xs[0]], [self.xs[1]]])
+        self.sc.set_offsets(np.c_[self.x, self.y])
+        #print(f'self.xs is {self.xs}')
+        self.x.append(self.xs[0])
+        self.y.append(self.xs[1])
+        # print(f"self.x is {self.x}")
+        # print(f"self.y is {self.y}")
         plt.draw()
-        plt.pause(0.1)  # Pause to allow the plot to update
+        #plt.show()
+        plt.pause(0.05)  # Pause to allow the plot to update
         """
         i/o - self, msg
         msg.u = theta dot
