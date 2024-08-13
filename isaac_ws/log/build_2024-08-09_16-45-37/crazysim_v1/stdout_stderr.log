@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/crazysim_v1/crazysim_v1.egg-info/PKG-INFO
+writing dependency_links to ../../build/crazysim_v1/crazysim_v1.egg-info/dependency_links.txt
+writing entry points to ../../build/crazysim_v1/crazysim_v1.egg-info/entry_points.txt
+writing requirements to ../../build/crazysim_v1/crazysim_v1.egg-info/requires.txt
+writing top-level names to ../../build/crazysim_v1/crazysim_v1.egg-info/top_level.txt
+reading manifest file '../../build/crazysim_v1/crazysim_v1.egg-info/SOURCES.txt'
+writing manifest file '../../build/crazysim_v1/crazysim_v1.egg-info/SOURCES.txt'
+running build
+running build_py
+copying crazysim_v1/crazysim.py -> /home/kiredoo/crazyflie-basics/isaac_ws/build/crazysim_v1/build/lib/crazysim_v1
+copying crazysim_v1/publish_coordinates.py -> /home/kiredoo/crazyflie-basics/isaac_ws/build/crazysim_v1/build/lib/crazysim_v1
+running install
+running install_lib
+copying /home/kiredoo/crazyflie-basics/isaac_ws/build/crazysim_v1/build/lib/crazysim_v1/crazysim.py -> /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1
+copying /home/kiredoo/crazyflie-basics/isaac_ws/build/crazysim_v1/build/lib/crazysim_v1/publish_coordinates.py -> /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1
+byte-compiling /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1/crazysim.py to crazysim.cpython-310.pyc
+byte-compiling /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1/publish_coordinates.py to publish_coordinates.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/crazysim_v1/crazysim_v1.egg-info to /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/python3.10/site-packages/crazysim_v1-0.0.0-py3.10.egg-info
+running install_scripts
+Installing controller = crazysim_v1.publish_coordinates:mainsimulator script to /home/kiredoo/crazyflie-basics/isaac_ws/install/crazysim_v1/lib/crazysim_v1
+writing list of installed files to '/home/kiredoo/crazyflie-basics/isaac_ws/build/crazysim_v1/install.log'
