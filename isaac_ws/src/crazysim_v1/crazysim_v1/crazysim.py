@@ -67,10 +67,10 @@ class LivePlotNode(Node):
     def update_plot(self):
         
         #Update the scatter plot with new coordinates
-        self.sc.set_offsets(np.c_[self.x, self.y])
         #print(f'self.xs is {self.xs}')
         self.x.append(self.xs[0])
         self.y.append(self.xs[1])
+        self.sc.set_offsets(np.c_[self.x, self.y])
         # print(f"self.x is {self.x}")
         # print(f"self.y is {self.y}")
         plt.draw()
@@ -102,6 +102,7 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
 # import rclpy
 # from rclpy.node import Node
