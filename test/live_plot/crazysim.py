@@ -9,9 +9,9 @@ class LivePlotNode(Node):
         super().__init__('live_plot_node')
         self.subscription = self.create_subscription(
             Float64MultiArray,
-            'coordinates',
+            'omega_control',
             self.listener_callback,
-            10
+            20
         )
         self.subscription  # prevent unused variable warning
 

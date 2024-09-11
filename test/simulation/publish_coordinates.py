@@ -1,19 +1,19 @@
 import rclpy
 import random
 from rclpy.node import Node
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64
 
 class ConstantCoordinatePublisher(Node):
     def __init__(self):
         super().__init__('constant_coordinate_publisher')
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'coordinates', 10)
+        self.publisher_ = self.create_publisher(Float64, 'coordinates', 10)
         self.timer = self.create_timer(1.0, self.publish_coordinates)  # 1 Hz
 
     def publish_coordinates(self):
-        msg = Float64MultiArray()
-        msg.data = [0.0 + 5*random.random(), 0.0 + 5*random.random()]
+        msg = Float64()
+        msg.data = 0.1
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: x={}, y={}'.format(msg.data[0],msg.data[1]))
+        self.get_logger().info('Publishing: angular velocity ={}'.format(msg.data))
 
 def main(args=None):
     rclpy.init(args=args)
