@@ -26,16 +26,23 @@ class LivePlotNode(Node):
             10
         )
         self.subscription  # prevent unused variable warning
+        # Store the history of positions to form the train
+        self.position_history = []  # To store (x, y) positions
+        self.train_length = 50  # Number of points in the train
 
         # Initialize the plot
         self.omega = 0.0  # Start with angular velocity = 0
         self.x = 0
         self.y = 0
         self.theta = 0
+        self.arrow_length = 1.0  # Length of the arrow
         self.fig, self.ax = plt.subplots()
-        self.sc = self.ax.scatter(self.x, self.y)
-        self.ax.set_xlim(-10, 100)
-        self.ax.set_ylim(-10, 100)
+        self.arrow = self.ax.quiver(self.x, self.y, np.cos(self.theta), np.sin(self.theta), angles='xy', scale_units='xy', scale=1)
+        self.ax.set_xlim(-20, 20)
+        self.ax.set_ylim(-20, 20)
+        self.ax.grid(True)
+        self.train_line, = self.ax.plot([], [], 'r-', lw=2,alpha = 0.8)  # Initialize the train as a red line
+
         plt.ion()
         plt.show()
 
@@ -54,7 +61,24 @@ class LivePlotNode(Node):
         self.x = self.x + ds[0]  # Simulate movement based on angular velocity
         self.y = self.y + ds[1]
         self.theta = self.theta + ds[2]
-        self.sc.set_offsets(np.c_[[self.x], [self.y]])
+        # print(self.theta)
+        # Update the arrow direction and position
+        self.arrow.set_offsets([self.x, self.y])
+        self.arrow.set_UVC(np.cos(self.theta), np.sin(self.theta))  # Set direction of arrow
+
+        # Add the current position to the history for the train
+        self.position_history.append((self.x, self.y))
+        
+        # Limit the length of the train by keeping only the last `train_length` positions
+        if len(self.position_history) > self.train_length:
+            self.position_history.pop(0)
+        # Update the train plot (as a line connecting the previous positions)
+        history_x, history_y = zip(*self.position_history)  # Separate x and y coordinates
+        self.train_line.set_data(history_x, history_y)  # Update the train line
+
+
+        self.ax.set_xlim(self.x - 20, self.x + 20)  # Center x-axis around the point
+        self.ax.set_ylim(self.y - 20, self.y + 20)
         plt.draw()
         plt.pause(0.001)  # Pause to allow the plot to update
 
