@@ -9,7 +9,7 @@ class LivePlotNode(Node):
         super().__init__('live_plot_node')
         self.subscription = self.create_subscription(
             Float64MultiArray,
-            'omega_control',
+            'coordinates',
             self.listener_callback,
             20
         )
