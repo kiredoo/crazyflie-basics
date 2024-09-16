@@ -4,6 +4,7 @@ from rclpy.node import Node
 from tf2_msgs.msg import TFMessage
 import matplotlib.pyplot as plt
 import numpy as np
+from pyquaternion import Quaternion
 
 class LivePlotNode(Node):
     def __init__(self):
@@ -31,6 +32,7 @@ class LivePlotNode(Node):
         # print(msg.transforms[1].transform.translation.x)
         self.x.append(msg.transforms[0].transform.translation.x)
         self.y.append(msg.transforms[0].transform.translation.y)
+        # q_theta = Quaternion(np.array([msg.transforms[0].transform.rotation.w, msg.transforms[0].transform.rotation.x, msg.transforms[0].transform.rotation.y, msg.transforms[0].transform.rotation.z]))
         self.theta = 2*np.arccos(msg.transforms[0].transform.rotation.w)
         self.update_plot()
     def update_plot(self):
