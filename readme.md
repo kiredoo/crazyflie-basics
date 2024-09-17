@@ -15,3 +15,8 @@ The paper presents a distributed controller for unicycle point sized vehicles to
 1. Does not depend on the number of agents
 2. Can follow moving beacons
 3. Avoids agent collisions who are within the control law
+
+
+### Crazyflie fundamentals
+
+Every time you power on a crazyflie, it initializes it's state as origin and 0 rad orientation. The world frame is also initialized at that point with x-axis pointing front and z-axis up. 
