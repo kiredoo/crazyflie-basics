@@ -17,12 +17,16 @@ from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.utils import uri_helper
 
+GOAL = [0,0]
+
 URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E701')
 DEFAULT_HEIGHT = 0.5
 
 deck_attached_event = Event()
 global position_estimate
-position_estimate = [0,0,0]
+global initial_position
+initial_position = [0,0,0]
+position_estimate = "start"
 
 logging.basicConfig(level=logging.ERROR)
 class LivePlotNode(Node):
@@ -54,7 +58,11 @@ class LivePlotNode(Node):
         self.y.append(msg.transforms[0].transform.translation.y)
         # q_theta = Quaternion(np.array([msg.transforms[0].transform.rotation.w, msg.transforms[0].transform.rotation.x, msg.transforms[0].transform.rotation.y, msg.transforms[0].transform.rotation.z]))
         self.theta = 2*np.arccos(msg.transforms[0].transform.rotation.w)
+        
         position_estimate = [self.x,self.y,self.theta]
+        if position_estimate == "start":
+            initial_position = position_estimate
+        
         # self.update_plot()
     # def update_plot(self):
     #     # Update the scatter plot with new coordinates
@@ -101,6 +109,11 @@ def take_off_simple(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         while(1):
             time.sleep(3)
+            if position_estimate == "start":
+                continue
+            v = 0.5
+            delta = np.array(GOAL)  - np.array(position_estimate)[0:2] 
+            
             mc.start_linear_motion(1,1,1)
             # mc.stop()
 

@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'position_control = position_control.position_control:main',
         ],
     },
 )
