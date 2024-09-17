@@ -65,6 +65,7 @@ class cf_sim(Node):
         self.timer = self.create_timer(self.timer_period, self.update_plot)
 
     def listener_callback(self, msg):
+        print(msg)
         # Update the angular velocity when a new message is received
         self.omega = msg.data
         # self.get_logger().info(f'Received angular velocity in rad/s : {self.omega}')
