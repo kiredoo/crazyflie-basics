@@ -25,6 +25,10 @@ DEFAULT_HEIGHT = 0.5
 deck_attached_event = Event()
 global position_estimate
 global initial_position
+global start_time
+global run_time
+run_time = 20 #s
+start_time = 0
 initial_position = [0,0,0]
 position_estimate = "start"
 
@@ -60,6 +64,7 @@ class LivePlotNode(Node):
         self.theta = 2*np.arccos(msg.transforms[0].transform.rotation.w)
         
         position_estimate = [self.x,self.y,self.theta]
+        print("Position of the crazyflie ground frame is : {}".format(position_estimate))
         if position_estimate == "start":
             initial_position = position_estimate
         
@@ -89,7 +94,7 @@ def optitrack(args=None):
         live_plot_node.destroy_node()
         rclpy.shutdown()
         # plt.ioff()  # Turn off interactive mode
-        # plt.show()  # Show plot one last time
+        # plt.show()  # Show plot one last tirun_timeme
 
 def cf_control():
     cflib.crtp.init_drivers()
@@ -103,19 +108,27 @@ def cf_control():
             print('No flow deck detected!')
             sys.exit(1)
 
-        take_off_simple(scf)
+        position_feedback_control(scf)
 
-def take_off_simple(scf):
+def position_feedback_control(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
-        while(1):
+        print("Connected to crazyflie : {}".format(URI))
+        mc.up(0.5)
+        time.sleep(4)
+        while(time.time() - start_time < run_time):
+            global position_estimate
             time.sleep(3)
             if position_estimate == "start":
                 continue
             v = 0.5
-            delta = np.array(GOAL)  - np.array(position_estimate)[0:2] 
-            
-            mc.start_linear_motion(1,1,1)
-            # mc.stop()
+            delta_g = np.array(GOAL)  - np.array(position_estimate)[0:2] 
+            theta = position_estimate[2]
+            R_theta = np.array([[np.cos(theta),-np.sin(theta)],[np.sin(theta),np.cos(theta)]]).T
+            delta = np.matmul(R_theta,delta_g.T)
+            delta = delta/np.linalg.norm(delta)
+            mc.start_linear_motion(0.1*delta[0],0.1*delta[1],0)
+            print("[At time {} s] : Moving drone towards : {} in drone frame and {} in optitrack frame".format(round(time.time() - start_time,1),delta,delta_g))
+        mc.stop()
 
 def param_deck_flow(_, value_str):
     value = int(value_str)
@@ -128,6 +141,8 @@ def param_deck_flow(_, value_str):
 
 
 def main(args=None):
+    global start_time
+    start_time = time.time()
     # Creating threads
     thread1 = threading.Thread(target=optitrack)
     thread2 = threading.Thread(target=cf_control)
