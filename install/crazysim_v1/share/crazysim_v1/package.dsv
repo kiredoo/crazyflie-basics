@@ -1,6 +1,0 @@
-source;share/crazysim_v1/hook/pythonpath.ps1
-source;share/crazysim_v1/hook/pythonpath.dsv
-source;share/crazysim_v1/hook/pythonpath.sh
-source;share/crazysim_v1/hook/ament_prefix_path.ps1
-source;share/crazysim_v1/hook/ament_prefix_path.dsv
-source;share/crazysim_v1/hook/ament_prefix_path.sh
