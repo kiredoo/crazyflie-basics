@@ -1,4 +1,0 @@
-[console_scripts]
-controller = crazysim_v1.publish_coordinates:main
-simulator = crazysim_v1.crazysim:main
-
