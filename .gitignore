@@ -5,3 +5,4 @@ cf_workspace/install/
 cf_workspace/log/
 cyclic_persuit/__pycache__/
 cache/
+**/rosbag_data/
