@@ -1,0 +1,38 @@
+[0.887s] Invoking command in '/home/kiredoo/crazyflie-basics/cf_workspace/src/takeoff': PYTHONPATH=/home/kiredoo/crazyflie-basics/build/takeoff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/takeoff build --build-base /home/kiredoo/crazyflie-basics/build/takeoff/build install --record /home/kiredoo/crazyflie-basics/build/takeoff/install.log --single-version-externally-managed install_data
+[1.071s] running egg_info
+[1.072s] creating ../../../build/takeoff/takeoff.egg-info
+[1.072s] writing ../../../build/takeoff/takeoff.egg-info/PKG-INFO
+[1.072s] writing dependency_links to ../../../build/takeoff/takeoff.egg-info/dependency_links.txt
+[1.073s] writing entry points to ../../../build/takeoff/takeoff.egg-info/entry_points.txt
+[1.073s] writing requirements to ../../../build/takeoff/takeoff.egg-info/requires.txt
+[1.073s] writing top-level names to ../../../build/takeoff/takeoff.egg-info/top_level.txt
+[1.073s] writing manifest file '../../../build/takeoff/takeoff.egg-info/SOURCES.txt'
+[1.074s] reading manifest file '../../../build/takeoff/takeoff.egg-info/SOURCES.txt'
+[1.074s] adding license file 'LICENSE'
+[1.074s] writing manifest file '../../../build/takeoff/takeoff.egg-info/SOURCES.txt'
+[1.075s] running build
+[1.075s] running build_py
+[1.075s] creating /home/kiredoo/crazyflie-basics/build/takeoff/build
+[1.075s] creating /home/kiredoo/crazyflie-basics/build/takeoff/build/lib
+[1.075s] creating /home/kiredoo/crazyflie-basics/build/takeoff/build/lib/takeoff
+[1.076s] copying takeoff/takeoff.py -> /home/kiredoo/crazyflie-basics/build/takeoff/build/lib/takeoff
+[1.076s] copying takeoff/__init__.py -> /home/kiredoo/crazyflie-basics/build/takeoff/build/lib/takeoff
+[1.076s] running install
+[1.076s] running install_lib
+[1.077s] creating /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff
+[1.077s] copying /home/kiredoo/crazyflie-basics/build/takeoff/build/lib/takeoff/takeoff.py -> /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff
+[1.077s] copying /home/kiredoo/crazyflie-basics/build/takeoff/build/lib/takeoff/__init__.py -> /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff
+[1.078s] byte-compiling /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff/takeoff.py to takeoff.cpython-310.pyc
+[1.078s] byte-compiling /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff/__init__.py to __init__.cpython-310.pyc
+[1.078s] running install_data
+[1.078s] creating /home/kiredoo/crazyflie-basics/install/takeoff/share/ament_index
+[1.078s] creating /home/kiredoo/crazyflie-basics/install/takeoff/share/ament_index/resource_index
+[1.079s] creating /home/kiredoo/crazyflie-basics/install/takeoff/share/ament_index/resource_index/packages
+[1.079s] copying resource/takeoff -> /home/kiredoo/crazyflie-basics/install/takeoff/share/ament_index/resource_index/packages
+[1.079s] copying package.xml -> /home/kiredoo/crazyflie-basics/install/takeoff/share/takeoff
+[1.080s] running install_egg_info
+[1.081s] Copying ../../../build/takeoff/takeoff.egg-info to /home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages/takeoff-0.0.0-py3.10.egg-info
+[1.082s] running install_scripts
+[1.098s] Installing takeoff script to /home/kiredoo/crazyflie-basics/install/takeoff/lib/takeoff
+[1.098s] writing list of installed files to '/home/kiredoo/crazyflie-basics/build/takeoff/install.log'
+[1.132s] Invoked command in '/home/kiredoo/crazyflie-basics/cf_workspace/src/takeoff' returned '0': PYTHONPATH=/home/kiredoo/crazyflie-basics/build/takeoff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kiredoo/crazyflie-basics/install/takeoff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/takeoff build --build-base /home/kiredoo/crazyflie-basics/build/takeoff/build install --record /home/kiredoo/crazyflie-basics/build/takeoff/install.log --single-version-externally-managed install_data
