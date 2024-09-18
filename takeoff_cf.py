@@ -46,5 +46,5 @@ if __name__ == '__main__':
             print('No flow deck detected!')
             sys.exit(1)
 
-       take_off_simple(scf)
+        take_off_simple(scf)
 
