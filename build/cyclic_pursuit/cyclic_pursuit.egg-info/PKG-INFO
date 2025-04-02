@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cyclic_pursuit
+Version: 0.0.0
+Summary: TODO: Package description
+Maintainer: kiredoo
+Maintainer-email: chl146@ucsd.edu
+License: TODO: License declaration
+Requires-Dist: setuptools

@@ -1,0 +1,155 @@
+[0.262s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/Desktop/cycli_pursuit_ws2/src/crazyswarm2/crazyflie -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie
+[0.311s] -- The C compiler identification is GNU 11.4.0
+[0.364s] -- The CXX compiler identification is GNU 11.4.0
+[0.371s] -- Detecting C compiler ABI info
+[0.434s] -- Detecting C compiler ABI info - done
+[0.441s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.442s] -- Detecting C compile features
+[0.442s] -- Detecting C compile features - done
+[0.445s] -- Detecting CXX compiler ABI info
+[0.519s] -- Detecting CXX compiler ABI info - done
+[0.524s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.524s] -- Detecting CXX compile features
+[0.524s] -- Detecting CXX compile features - done
+[0.526s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.864s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.932s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.963s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[1.012s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.017s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.026s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.038s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.055s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.111s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.115s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.222s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.253s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.297s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.312s] -- Looking for pthread.h
+[1.378s] -- Looking for pthread.h - found
+[1.379s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.447s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.448s] -- Found Threads: TRUE  
+[1.520s] -- Found tf2_ros: 0.25.9 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.630s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[1.631s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[1.640s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.655s] -- Found crazyflie_interfaces: 2.0.0 (/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/share/crazyflie_interfaces/cmake)
+[1.668s] -- Found motion_capture_tracking_interfaces: 1.0.5 (/opt/ros/humble/share/motion_capture_tracking_interfaces/cmake)
+[1.710s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: program_options 
+[1.714s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[1.785s] -- Configuring done
+[1.814s] -- Generating done
+[1.822s] -- Build files have been written to: /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie
+[1.831s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/Desktop/cycli_pursuit_ws2/src/crazyswarm2/crazyflie -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie
+[1.832s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie -- -j20 -l20
+[1.880s] [ 10%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/Crazyradio.cpp.o[0m
+[1.880s] [ 10%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/Connection.cpp.o[0m
+[1.880s] [ 10%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/USBDevice.cpp.o[0m
+[1.880s] [ 10%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/USBManager.cpp.o[0m
+[1.880s] [ 12%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/CrazyflieUSB.cpp.o[0m
+[1.880s] [ 15%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/CrazyradioThread.cpp.o[0m
+[1.881s] [ 17%] [32mBuilding CXX object CMakeFiles/teleop.dir/src/teleop.cpp.o[0m
+[1.883s] [ 22%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/CrazyflieUSBThread.cpp.o[0m
+[1.883s] [ 22%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/crazyflie-link-cpp/CMakeFiles/crazyflieLinkCpp.dir/src/Version.cpp.o[0m
+[5.323s] [ 25%] [32m[1mLinking CXX static library libcrazyflieLinkCpp.a[0m
+[5.495s] [ 25%] Built target crazyflieLinkCpp
+[5.514s] [ 30%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/CMakeFiles/crazyflie_cpp.dir/src/Crazyflie.cpp.o[0m
+[5.514s] [ 30%] [32mBuilding CXX object deps/crazyflie_tools/crazyflie_cpp/CMakeFiles/crazyflie_cpp.dir/src/crtp.cpp.o[0m
+[10.613s] [ 32%] [32m[1mLinking CXX static library libcrazyflie_cpp.a[0m
+[10.674s] [ 32%] Built target crazyflie_cpp
+[10.691s] [ 35%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/listParams.dir/src/listParams.cpp.o[0m
+[10.692s] [ 37%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/listLogVariables.dir/src/listLogVariables.cpp.o[0m
+[10.692s] [ 40%] [32mBuilding CXX object CMakeFiles/crazyflie_server.dir/src/crazyflie_server.cpp.o[0m
+[10.692s] [ 45%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/comCheck.dir/src/comCheck.cpp.o[0m
+[10.692s] [ 45%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/battery.dir/src/battery.cpp.o[0m
+[10.693s] [ 50%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/scan.dir/src/scan.cpp.o[0m
+[10.693s] [ 50%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/reboot.dir/src/reboot.cpp.o[0m
+[10.695s] [ 52%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/version.dir/src/version.cpp.o[0m
+[10.696s] [ 55%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/console.dir/src/console.cpp.o[0m
+[10.723s] [ 57%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/downloadUSDLogfile.dir/src/downloadUSDLogfile.cpp.o[0m
+[10.725s] [ 60%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/listMemories.dir/src/listMemories.cpp.o[0m
+[10.729s] [ 62%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/setParam.dir/src/setParam.cpp.o[0m
+[10.731s] [ 65%] [32mBuilding CXX object deps/crazyflie_tools/CMakeFiles/log.dir/src/log.cpp.o[0m
+[12.818s] [ 67%] [32m[1mLinking CXX executable scan[0m
+[12.891s] [ 70%] [32m[1mLinking CXX executable console[0m
+[12.904s] [ 70%] Built target scan
+[12.986s] [ 70%] Built target console
+[13.576s] [ 72%] [32m[1mLinking CXX executable reboot[0m
+[13.640s] [ 75%] [32m[1mLinking CXX executable comCheck[0m
+[13.673s] [ 75%] Built target reboot
+[13.718s] [ 75%] Built target comCheck
+[13.743s] [ 77%] [32m[1mLinking CXX executable downloadUSDLogfile[0m
+[13.776s] [ 80%] [32m[1mLinking CXX executable listLogVariables[0m
+[13.811s] [ 80%] Built target downloadUSDLogfile
+[13.847s] [ 80%] Built target listLogVariables
+[13.958s] [ 82%] [32m[1mLinking CXX executable listMemories[0m
+[13.976s] [ 85%] [32m[1mLinking CXX executable setParam[0m
+[14.008s] [ 87%] [32m[1mLinking CXX executable version[0m
+[14.027s] [ 87%] Built target listMemories
+[14.029s] [ 90%] [32m[1mLinking CXX executable listParams[0m
+[14.079s] [ 90%] Built target setParam
+[14.079s] [ 90%] Built target version
+[14.107s] [ 90%] Built target listParams
+[14.358s] [ 92%] [32m[1mLinking CXX executable battery[0m
+[14.428s] [ 92%] Built target battery
+[15.125s] [ 95%] [32m[1mLinking CXX executable log[0m
+[15.214s] [ 95%] Built target log
+[20.867s] [ 97%] [32m[1mLinking CXX executable teleop[0m
+[21.126s] [ 97%] Built target teleop
+[51.918s] [100%] [32m[1mLinking CXX executable crazyflie_server[0m
+[52.360s] [100%] Built target crazyflie_server
+[52.371s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie -- -j20 -l20
+[52.372s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie
+[52.379s] -- Install configuration: "Release"
+[52.380s] -- Execute custom install script
+[52.380s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/comCheck
+[52.389s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/scan
+[52.398s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/listParams
+[52.406s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/listLogVariables
+[52.415s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/listMemories
+[52.423s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/reboot
+[52.433s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/battery
+[52.440s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/version
+[52.449s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/console
+[52.457s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/log
+[52.465s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/setParam
+[52.472s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/downloadUSDLogfile
+[52.480s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/teleop
+[52.487s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/crazyflie_server
+[52.494s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/crazyflie_server.py
+[52.502s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/chooser.py
+[52.509s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/vel_mux.py
+[52.516s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/cfmult.py
+[52.523s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/simple_mapper_multiranger.py
+[52.530s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/aideck_streamer.py
+[52.538s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/gui.py
+[52.545s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/lib/crazyflie/flash.py
+[52.553s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//launch/launch.py
+[52.560s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//launch/launch_teleop2.py
+[52.568s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//launch/teleop_launch.py
+[52.576s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/aideck_streamer.yaml
+[52.588s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/config.rviz
+[52.600s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/crazyflies.yaml
+[52.608s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/motion_capture.yaml
+[52.616s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/server.yaml
+[52.624s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//config/teleop.yaml
+[52.632s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//urdf/cf2_assembly.stl
+[52.643s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//urdf/cf2_assembly_with_props.dae
+[52.653s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie//urdf/crazyflie_description.urdf
+[52.660s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/ament_index/resource_index/package_run_dependencies/crazyflie
+[52.667s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/ament_index/resource_index/parent_prefix_path/crazyflie
+[52.675s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/environment/ament_prefix_path.sh
+[52.682s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/environment/ament_prefix_path.dsv
+[52.689s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/environment/path.sh
+[52.697s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/environment/path.dsv
+[52.704s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/local_setup.bash
+[52.712s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/local_setup.sh
+[52.719s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/local_setup.zsh
+[52.727s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/local_setup.dsv
+[52.734s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/package.dsv
+[52.742s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/ament_index/resource_index/packages/crazyflie
+[52.749s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/cmake/crazyflieConfig.cmake
+[52.757s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/cmake/crazyflieConfig-version.cmake
+[52.764s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie/share/crazyflie/package.xml
+[52.773s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie

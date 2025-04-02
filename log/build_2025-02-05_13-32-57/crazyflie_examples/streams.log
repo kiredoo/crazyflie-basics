@@ -1,0 +1,165 @@
+[0.009s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/Desktop/cycli_pursuit_ws2/src/crazyswarm2/crazyflie_examples -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples
+[0.059s] -- The C compiler identification is GNU 11.4.0
+[0.113s] -- The CXX compiler identification is GNU 11.4.0
+[0.120s] -- Detecting C compiler ABI info
+[0.182s] -- Detecting C compiler ABI info - done
+[0.190s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.190s] -- Detecting C compile features
+[0.190s] -- Detecting C compile features - done
+[0.193s] -- Detecting CXX compiler ABI info
+[0.265s] -- Detecting CXX compiler ABI info - done
+[0.274s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.274s] -- Detecting CXX compile features
+[0.274s] -- Detecting CXX compile features - done
+[0.277s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.666s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.761s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.904s] -- Found ament_cmake_pytest: 1.3.11 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[1.595s] -- Configuring done
+[1.599s] -- Generating done
+[1.602s] -- Build files have been written to: /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples
+[1.605s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/Desktop/cycli_pursuit_ws2/src/crazyswarm2/crazyflie_examples -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples
+[1.607s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples -- -j20 -l20
+[1.655s] Built target ament_cmake_python_symlink_crazyflie_examples_setup
+[1.655s] Built target ament_cmake_python_symlink_crazyflie_examples
+[1.815s] running install_scripts
+[1.841s] /home/turtlebot/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.841s] !!
+[1.841s] 
+[1.841s]         ********************************************************************************
+[1.841s]         Please avoid running ``setup.py`` directly.
+[1.841s]         Instead, use pypa/build, pypa/installer or other
+[1.841s]         standards-based tools.
+[1.841s] 
+[1.841s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.841s]         ********************************************************************************
+[1.841s] 
+[1.841s] !!
+[1.841s]   self.initialize_options()
+[1.844s] running egg_info
+[1.868s] running egg_info
+[1.871s] creating crazyflie_examples.egg-info
+[1.872s] writing crazyflie_examples.egg-info/PKG-INFO
+[1.872s] writing dependency_links to crazyflie_examples.egg-info/dependency_links.txt
+[1.872s] writing entry points to crazyflie_examples.egg-info/entry_points.txt
+[1.872s] writing top-level names to crazyflie_examples.egg-info/top_level.txt
+[1.873s] writing manifest file 'crazyflie_examples.egg-info/SOURCES.txt'
+[1.881s] writing crazyflie_examples.egg-info/PKG-INFO
+[1.881s] writing dependency_links to crazyflie_examples.egg-info/dependency_links.txt
+[1.882s] writing entry points to crazyflie_examples.egg-info/entry_points.txt
+[1.882s] writing top-level names to crazyflie_examples.egg-info/top_level.txt
+[1.901s] reading manifest file 'crazyflie_examples.egg-info/SOURCES.txt'
+[1.901s] writing manifest file 'crazyflie_examples.egg-info/SOURCES.txt'
+[1.920s] reading manifest file 'crazyflie_examples.egg-info/SOURCES.txt'
+[1.921s] writing manifest file 'crazyflie_examples.egg-info/SOURCES.txt'
+[1.943s] Built target ament_cmake_python_build_crazyflie_examples_egg
+[1.994s] Installing arming script to scripts
+[1.994s] Installing cmd_full_state script to scripts
+[1.994s] Installing figure8 script to scripts
+[1.994s] Installing group_mask script to scripts
+[1.994s] Installing hello_world script to scripts
+[1.994s] Installing infinite_flight script to scripts
+[1.994s] Installing multi_trajectory script to scripts
+[1.994s] Installing nice_hover script to scripts
+[1.994s] Installing set_param script to scripts
+[1.995s] Installing square script to scripts
+[1.995s] Installing swap script to scripts
+[1.995s] Installing test_thrust_code script to scripts
+[1.995s] Installing test_thrust_topic script to scripts
+[2.019s] Built target ament_cmake_python_build_crazyflie_examples_scripts
+[2.030s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples -- -j20 -l20
+[2.031s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples
+[2.038s] -- Install configuration: "Release"
+[2.038s] -- Execute custom install script
+[2.039s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/pythonpath.sh
+[2.047s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/pythonpath.dsv
+[2.055s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples-2.0.0-py3.10.egg-info/PKG-INFO
+[2.063s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples-2.0.0-py3.10.egg-info/SOURCES.txt
+[2.071s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples-2.0.0-py3.10.egg-info/dependency_links.txt
+[2.079s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples-2.0.0-py3.10.egg-info/entry_points.txt
+[2.087s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples-2.0.0-py3.10.egg-info/top_level.txt
+[2.095s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//arming
+[2.103s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//cmd_full_state
+[2.111s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//figure8
+[2.119s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//group_mask
+[2.127s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//hello_world
+[2.135s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//infinite_flight
+[2.143s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//multi_trajectory
+[2.150s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//nice_hover
+[2.158s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//set_param
+[2.166s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//square
+[2.174s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//swap
+[2.182s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//test_thrust_code
+[2.190s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/lib/crazyflie_examples//test_thrust_topic
+[2.199s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/__init__.py
+[2.207s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/arming.py
+[2.215s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/cmd_full_state.py
+[2.223s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/cmd_vel_legacy_test.py
+[2.231s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/data/figure8.csv
+[2.239s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/data/multi_trajectory/traj0.csv
+[2.247s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/data/multi_trajectory/traj1.csv
+[2.254s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/figure8.py
+[2.263s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/figure8_mod.py
+[2.270s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/group_mask.py
+[2.278s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/hello_world copy.py
+[2.286s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/hello_world.py
+[2.294s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/infinite_flight.py
+[2.302s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/multi_trajectory.py
+[2.310s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/nice_hover.py
+[2.318s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/set_param.py
+[2.326s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/square.py
+[2.334s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/swap.py
+[2.342s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/test_thrust_code.py
+[2.349s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/test_thrust_topic.py
+[2.357s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//config/nav2_params.yaml
+[2.365s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//config/nav2_view.rviz
+[2.373s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//data/map.data
+[2.381s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//data/map.pgm
+[2.389s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//data/map.posegraph
+[2.397s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//data/map.yaml
+[2.406s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//launch/keyboard_velmux_launch.py
+[2.414s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//launch/launch.py
+[2.422s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//launch/multiranger_mapping_launch.py
+[2.430s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//launch/multiranger_nav2_launch.py
+[2.438s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples//launch/multiranger_simple_mapper_launch.py
+[2.446s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/ament_index/resource_index/package_run_dependencies/crazyflie_examples
+[2.454s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/ament_index/resource_index/parent_prefix_path/crazyflie_examples
+[2.462s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/ament_prefix_path.sh
+[2.470s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/ament_prefix_path.dsv
+[2.478s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/path.sh
+[2.486s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/environment/path.dsv
+[2.494s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/local_setup.bash
+[2.502s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/local_setup.sh
+[2.510s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/local_setup.zsh
+[2.518s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/local_setup.dsv
+[2.526s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/package.dsv
+[2.535s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/ament_index/resource_index/packages/crazyflie_examples
+[2.543s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/cmake/crazyflie_examplesConfig.cmake
+[2.551s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/cmake/crazyflie_examplesConfig-version.cmake
+[2.559s] -- Symlinking: /home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/share/crazyflie_examples/package.xml
+[2.609s] Listing '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples'...
+[2.609s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/__init__.py'...
+[2.609s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/arming.py'...
+[2.609s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/cmd_full_state.py'...
+[2.609s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/cmd_vel_legacy_test.py'...
+[2.610s] Listing '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/data'...
+[2.610s] Listing '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/data/multi_trajectory'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/figure8.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/figure8_mod.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/group_mask.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/hello_world copy.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/hello_world.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/infinite_flight.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/multi_trajectory.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/nice_hover.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/set_param.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/square.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/swap.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/test_thrust_code.py'...
+[2.610s] Compiling '/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/test_thrust_topic.py'...
+[2.610s] ***   File "/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_examples/local/lib/python3.10/dist-packages/crazyflie_examples/test_thrust_topic.py", line 4
+[2.610s]     import numpy as 
+[2.610s]                     ^
+[2.610s] SyntaxError: invalid syntax
+[2.610s] 
+[2.616s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_py:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_py/lib/python3.10/site-packages:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/crazyflie_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_examples

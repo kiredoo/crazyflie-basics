@@ -1,0 +1,1 @@
+/home/turtlebot/Desktop/cycli_pursuit_ws2/build/crazyflie_interfaces/rosidl_cmake/srv/RemoveLogging_Request.msg

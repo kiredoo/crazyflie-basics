@@ -1,0 +1,6 @@
+setup.py
+crazyflie_interfaces/__init__.py
+crazyflie_interfaces.egg-info/PKG-INFO
+crazyflie_interfaces.egg-info/SOURCES.txt
+crazyflie_interfaces.egg-info/dependency_links.txt
+crazyflie_interfaces.egg-info/top_level.txt

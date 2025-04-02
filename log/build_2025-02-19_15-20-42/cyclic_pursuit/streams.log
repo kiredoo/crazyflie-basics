@@ -1,0 +1,20 @@
+[0.990s] Invoking command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit': PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/cyclic_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit/build --no-deps symlink_data
+[1.159s] /home/turtlebot/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[1.160s]   warnings.warn(msg)
+[1.394s] running develop
+[1.718s] running egg_info
+[1.742s] writing cyclic_pursuit.egg-info/PKG-INFO
+[1.742s] writing dependency_links to cyclic_pursuit.egg-info/dependency_links.txt
+[1.743s] writing entry points to cyclic_pursuit.egg-info/entry_points.txt
+[1.743s] writing requirements to cyclic_pursuit.egg-info/requires.txt
+[1.743s] writing top-level names to cyclic_pursuit.egg-info/top_level.txt
+[1.791s] reading manifest file 'cyclic_pursuit.egg-info/SOURCES.txt'
+[1.794s] writing manifest file 'cyclic_pursuit.egg-info/SOURCES.txt'
+[1.818s] running build_ext
+[1.819s] Creating /home/turtlebot/Desktop/cycli_pursuit_ws2/install/cyclic_pursuit/lib/python3.10/site-packages/cyclic-pursuit.egg-link (link to .)
+[1.820s] Installing pose_sub script to /home/turtlebot/Desktop/cycli_pursuit_ws2/install/cyclic_pursuit/lib/cyclic_pursuit
+[1.820s] Installing pose_vir script to /home/turtlebot/Desktop/cycli_pursuit_ws2/install/cyclic_pursuit/lib/cyclic_pursuit
+[1.821s] 
+[1.821s] Installed /home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit
+[1.821s] running symlink_data
+[1.851s] Invoked command in '/home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit' returned '0': PYTHONPATH=/home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/turtlebot/Desktop/cycli_pursuit_ws2/install/cyclic_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/turtlebot/Desktop/cycli_pursuit_ws2/build/cyclic_pursuit/build --no-deps symlink_data
