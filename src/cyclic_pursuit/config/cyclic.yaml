@@ -1,0 +1,23 @@
+params:
+  ros__parameters:
+    cfs_names:
+      - cf231
+      - cf123
+      - cf232
+    cfs_id:
+      - '231'
+      - '123'
+      - '232'
+    height: 0.5
+    v: 0.3
+    av: 0.7853981633974483      # np.pi/4
+    ds: 1.0
+    dl: 4.0
+    psi: 5.497787143782138         # np.pi * (7/4)
+    d_0: 2.83
+    c: 2.0
+    cj: 2.0
+    k: 0.17
+    kj: 0.31
+    rho_o: 0.8
+    n: 3
