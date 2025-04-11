@@ -52,6 +52,7 @@ def Bd(gamma_ij):
             bd.append(gamma_ij_target - 2*np.pi)
         else :
             print("Error in gamma_ij value" + str(gamma_ij_target))
+            bd.append(gamma_ij_target - 2*np.pi)
     return bd
 
 def pij(x, n, agent_coord):

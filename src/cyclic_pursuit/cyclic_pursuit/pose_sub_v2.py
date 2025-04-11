@@ -1,4 +1,7 @@
+from std_srvs.srv import Trigger
 import rclpy
+import signal
+import time
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
@@ -10,6 +13,8 @@ import numpy as np
 from cyclic_pursuit.functions.utils import *
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 from rclpy.parameter import ParameterValue, ParameterType
+from crazyflie_py import Crazyswarm
+from rclpy.signals import SignalHandlerOptions
 
 qos_profile = QoSProfile(depth=20)
 qos_profile.reliability = ReliabilityPolicy.RELIABLE
@@ -18,15 +23,8 @@ qos_profile.durability = DurabilityPolicy.VOLATILE
 
 
 
-global v
 global dt
-global psi
-global c
-global v
-global n
-global k
 global radius
-global rho_o
 global control_signal
 global control_hold
 global control_rate
@@ -88,8 +86,6 @@ global gamma_ij_glob
 # rho_o = 0.8
 # n = 3
 
-# turn these global variables into an xml file
-# to run parameter servers
 
 def yaw_from_quaternion(quaternion):
     return 2*np.arctan2(quaternion.z, quaternion.w)
@@ -99,7 +95,10 @@ class Crazyflie(Node):
 
     def __init__(self,name,id,cfs_names,v,av,ds,dl,psi,d_0,c,cj,k,kj,rho_o,n,height):
         super().__init__(name)
-        
+        self.height = height
+        self.landing_final_step = 0
+        self.landing_start_step = 30
+        self.landing_initial_speed = self.height
         self.v = v
         self.av = av
         self.ds = ds
@@ -112,7 +111,6 @@ class Crazyflie(Node):
         self.kj = kj
         self.rho_o = rho_o
         self.n = n
-        self.height = height
         self.name = name
         self.id = id
         self.pose = [0.0,0.0,0.0]
@@ -125,7 +123,13 @@ class Crazyflie(Node):
             10
         )
         # self.pose_subscrition()
+
         self.create_subscription(PoseStamped,'/all_crazyflies/odom',self.odom_callback,qos_profile = qos_profile)
+        self.landing_service = self.create_service(
+        Trigger,
+        f'/{self.name}/trigger_landing',
+        self.landing_service_callback)
+
         self.odom_publish = self.create_publisher(PoseStamped, '/all_crazyflies/odom',10)
         self.cmd_pub = self.create_publisher(Twist,f'/{self.name}/cmd_vel_hover',10)
         self.cmd_msg = Twist()
@@ -133,24 +137,32 @@ class Crazyflie(Node):
         self.cmd_msg.linear.x = self.v
         self.cmd_msg.linear.z = self.height
 
-        timer_period = 0.05  # seconds (20 Hz)
+        timer_period = 0.025  # seconds (20 Hz)
         self.timer = self.create_timer(timer_period, self.controller)
         # self.odom_ready = False
         self.get_logger().info(
                                 f'params for cf: {self.id}: v: {self.v}, av: {self.av}, ds: {self.ds}, '
                                 f'dl: {self.dl}, psi: {self.psi}, d_0: {self.d_0}, '
                                 f'c: {self.c}, cj: {self.cj}, k: {self.k}, kj: {self.kj}, '
-                                f'rho_o: {self.rho_o}, n: {self.n}, height: {self.height}'
-)
+                                f'rho_o: {self.rho_o}, n: {self.n}, height: {self.height}')
 
+        self.landing_timer = self.create_timer(0.1, self.landing_callback, callback_group=self.default_callback_group)
+        self.landing_timer.cancel()  # Start disabled
 
+    def landing_service_callback(self, request, response):
+        self.get_logger().info("Landing service called.")
+        self.start_landing()
+
+        response.success = True
+        response.message = f"{self.name} is landing."
+        return response
 
     def pose_sub(self,msg):
         
         yaw = yaw_from_quaternion(msg.pose.orientation)
 
         self.pose = [msg.pose.position.x,msg.pose.position.y,yaw]
-        # self.get_logger().info(f'Pose_sub for cf: {self.id}: {str(self.pose)}')
+        # self.get_logger().infoself.landing_timer = None(f'Pose_sub for cf: {self.id}: {str(self.pose)}')
         self.publish_odom()
     
     def publish_odom(self):
@@ -209,7 +221,34 @@ class Crazyflie(Node):
         # self.cmd_msg.linear.x = 0.3
         # self.cmd_msg.linear.z = 0.5        # print(f"Controller: publish{theta_dot}")
         self.cmd_pub.publish(self.cmd_msg)
-     
+    
+    def start_landing(self):
+        if hasattr(self, 'timer') and self.timer is not None:
+            self.timer.cancel()
+        self.landing_final_step = 0
+        self.descend_rate = self.landing_initial_speed / self.landing_start_step
+        self.landing_timer.reset()
+        self.get_logger().info(f"{self.name} landing started.")
+
+    def landing_callback(self):
+        if self.landing_final_step >= self.landing_start_step:
+            self.cmd_msg.linear.z = 0.0
+            self.cmd_pub.publish(self.cmd_msg)
+            self.landing_timer.cancel()
+            self.landing_timer = None
+            return
+        
+        z_vel = self.landing_initial_speed - self.landing_final_step * self.descend_rate
+        self.cmd_msg.linear.x = 0.0
+        self.cmd_msg.linear.y = 0.0
+        self.cmd_msg.linear.z = z_vel
+        self.cmd_msg.angular.z = 0.0
+        self.cmd_pub.publish(self.cmd_msg)
+
+        self.get_logger().info(f"Landing step {self.landing_final_step}, z_vel: {z_vel}")
+        self.landing_final_step += 1
+
+
         
 
 class pose_subscriber(Node):
@@ -235,8 +274,8 @@ class pose_subscriber(Node):
                 ('rho_o', 0.0),
                 ('n', 0),
                 ('height',0.0)
-            ]
-)   
+            ])   
+        
         self.cfs_names = self.get_parameter('cfs_names').get_parameter_value().string_array_value
         self.cfs_id = self.get_parameter('cfs_id').get_parameter_value().string_array_value
         self.v = self.get_parameter('v').get_parameter_value().double_value
@@ -266,10 +305,28 @@ class pose_subscriber(Node):
     def getnodes(self):
         return list(self.cfs.values())
     
+# def smooth_land(cf_node, descend_rate, step_time, steps):
+#     rate = descend_rate/steps
+#     for i in range(steps):
+#         vel = Twist()s
+#         vel.linear.x = 0.0
+#         vel.linear.y = 0.0
+#         vel.linear.z = descend_rate - i * rate
+#         vel.angular.z = 0.0
+#         cf_node.cmd_pub.publish(vel)
+
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    # rclpy.init(args=args)
+    TAKEOFF_DURATION = 2.5
+    swarm = Crazyswarm()
+    timeHelper = swarm.timeHelper
+    allcfs = swarm.allcfs
+
+    allcfs.takeoff(targetHeight=0.5, duration=TAKEOFF_DURATION)
+    timeHelper.sleep(5)
+
 
     posesubscriber = pose_subscriber()
 
@@ -280,14 +337,22 @@ def main(args=None):
     for node in posesubscriber.getnodes():
         executor.add_node(node)
 
+    
     try:
         executor.spin()
+
     except KeyboardInterrupt:
         pass
+
     finally:
+   
         for node in posesubscriber.getnodes():
             node.destroy_node()
+      
         rclpy.shutdown()
+      
+
+
 
 if __name__ == '__main__':
     main()

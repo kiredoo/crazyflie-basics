@@ -12,10 +12,10 @@ def main():
     timeHelper = swarm.timeHelper
     allcfs = swarm.allcfs
 
-    allcfs.takeoff(targetHeight=1.0, duration=TAKEOFF_DURATION)
+    allcfs.takeoff(targetHeight=0.5, duration=TAKEOFF_DURATION)
     timeHelper.sleep(TAKEOFF_DURATION)
 
-    print('press button to continue...')
+    print('press button to land...')
     swarm.input.waitUntilButtonPressed()
   
     allcfs.land(targetHeight=0.04, duration=TAKEOFF_DURATION)

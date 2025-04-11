@@ -1,13 +1,13 @@
 # named list of all robots
 robots:
   cf123:
-    enabled: false
-    uri: radio://0/80/2M/E7E7E7E703
-    initial_position: [-1, -0.6, 0.0]
+    enabled: true
+    uri: radio://0/80/2M/E7E7E7E702
+    initial_position: [-1.8, -0.6, 0.0]
     type: cf21  # see robot_types
 
     firmware_logging:
-      enabled: t
+      enabled: true
       # default_topics:
       #   pose:
       #     frequency: 50 # Hz
@@ -20,9 +20,9 @@ robots:
           vars: ["pm.vbat"]
 
   cf231:
-    enabled: false
-    uri: radio://0/80/2M/E7E7E7E708
-    initial_position: [0,-0.6, 0.0]
+    enabled: true
+    uri: radio://0/80/2M/E7E7E7E703
+    initial_position: [-0.6,0.0, 0.0]
     type: cf21  # see robot_types
     firmware_logging:
       enabled: true
@@ -39,8 +39,8 @@ robots:
 
   cf232:
     enabled: true
-    uri: radio://0/80/2M/E7E7E7E703
-    initial_position: [-1.8,-0.6, 0.0]
+    uri: radio://0/80/2M/E7E7E7E710
+    initial_position: [-1.8,1.2, 0.0]
     type: cf21  # see robot_types
     firmware_logging:
       enabled: true
@@ -57,7 +57,7 @@ robots:
     
   cf233:
     enabled: false
-    uri: radio://0/80/2M/E7E7E7E702
+    uri: radio://0/80/2M/E7E7E7E703
     initial_position: [-1.8,0.6, 0.0]
     type: cf21  # see robot_types
     firmware_logging:
