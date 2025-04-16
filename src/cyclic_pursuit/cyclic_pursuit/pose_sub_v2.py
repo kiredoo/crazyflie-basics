@@ -41,51 +41,6 @@ global vis_zone_vec2
 global utj_vec
 global gamma_ij_glob
 
-########### PARAMS FOR N = 1 ############
-# v = 0.3
-# av = np.pi/4
-# ds = 0.5
-# dl = 1
-# psi = np.pi * (2)
-# d_0 = 1.285
-# c = 2
-# cj = 2
-# k = 0.075
-# kj = 0.15
-# rho_o = 0.02
-# n = 2
-#########################################
-
-########### PARAMS FOR N = 2 ############
-# v = 0.3
-# av = np.pi/4
-# ds = 0.5
-# dl = 1
-# psi = np.pi * (2)
-# d_0 = 1.285
-# c = 2
-# cj = 2
-# k = 0.075
-# kj = 0.15
-# rho_o = 0.02
-# n = 2
-#########################################
-
-#define params
-
-# v = 0.3
-# av = np.pi/4
-# ds = 1
-# dl = 4
-# psi = np.pi * (7/4)
-# d_0 = 2.83
-# c = 2
-# cj = 2
-# k = 0.17
-# kj = 0.31
-# rho_o = 0.8
-# n = 3
-
 
 def yaw_from_quaternion(quaternion):
     return 2*np.arctan2(quaternion.z, quaternion.w)
@@ -345,14 +300,10 @@ def main(args=None):
         pass
 
     finally:
-   
         for node in posesubscriber.getnodes():
             node.destroy_node()
-      
         rclpy.shutdown()
       
-
-
 
 if __name__ == '__main__':
     main()
