@@ -231,8 +231,10 @@ class pose_subscriber(Node):
                 ('height',0.0)
             ])   
         
-        self.cfs_names = self.get_parameter('cfs_names').get_parameter_value().string_array_value
-        self.cfs_id = self.get_parameter('cfs_id').get_parameter_value().string_array_value
+        self.cfs_active_names = self.get_parameter('cfs_active_names').get_parameter_value().string_array_value
+        self.cfs_inactive_names = self.get_parameter('cfs_inactive_names').get_parameter_value().string_array_value
+        self.cfs_active_id = self.get_parameter('cfs_active_id').get_parameter_value().string_array_value
+        self.cfs_inactive_id = self.get_parameter('cfs_inactive_id').get_parameter_value().string_array_value
         self.v = self.get_parameter('v').get_parameter_value().double_value
         self.av = self.get_parameter('av').get_parameter_value().double_value
         self.ds = self.get_parameter('ds').get_parameter_value().double_value
@@ -250,15 +252,16 @@ class pose_subscriber(Node):
         # self.cfs_id = ['231','123','232']
 
         self.cfs = {}
-        for cf_name,id in zip(self.cfs_names,self.cfs_id):
+        for cf_name,id in zip(self.cfs_active_names,self.cfs_active_id):
             self.cfs[cf_name] = Crazyflie(cf_name,id,self.cfs_names,self.v,self.av,self.ds,
                                           self.dl,self.psi,self.d_0,self.c,self.cj,self.k,
                                           self.kj,self.rho_o,self.n,self.height)
             # rclpy.spin(self.cfs[cf_name])
 
-    
     def getnodes(self):
         return list(self.cfs.values())
+    
+    
     
 # def smooth_land(cf_node, descend_rate, step_time, steps):
 #     rate = descend_rate/steps
@@ -270,7 +273,8 @@ class pose_subscriber(Node):
 #         vel.angular.z = 0.0
 #         cf_node.cmd_pub.publish(vel)
 
-
+    
+    
 
 def main(args=None):
     # rclpy.init(args=args)

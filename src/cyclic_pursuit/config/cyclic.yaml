@@ -1,13 +1,22 @@
 params:
   ros__parameters:
-    cfs_names:
+    cfs_active_names:
       - cf231
       - cf123
       - cf232
-    cfs_id:
+    cfs_active_id:
       - '231'
       - '123'
       - '232'
+    cfs_inactive_names:
+      - cf231
+      - cf123
+      - cf232
+    cfs_inactive_id:
+      - '231'
+      - '123'
+      - '232'
+
     height: 0.5
     v: 0.3
     av: 0.7853981633974483      # np.pi/4
