@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pose_sub = cyclic_pursuit.pose_sub_v2:main',
+            'controller = cyclic_pursuit.controller:main',
             'pose_vir = cyclic_pursuit.variable_pose_publisher:main',
             'landing_client = cyclic_pursuit.landing:main',
         ],

@@ -14,7 +14,7 @@ def generate_launch_description():
 
     node =  Node(
             package='cyclic_pursuit',
-            executable='pose_sub',
+            executable='controller',
             output = 'screen',
             parameters = [config]
         )       
