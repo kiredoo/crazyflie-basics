@@ -188,32 +188,32 @@ for i = 1:length(all_msgs)
     %heading(i) = orientation.z
 end
 
-% Display the x and y positions
-%disp('X Positions:');
-%disp(x_positions);
-%disp('Y Positions:');
-%disp(y_positions);
+Display the x and y positions
+disp('X Positions:');
+disp(x_positions);
+disp('Y Positions:');
+disp(y_positions);
 
-% messages = select(bag, 'Topic', '/cf232/pose');
-% 
-% % Read all messages in one go
-% all_msgs = readMessages(messages);
-% 
-% % Initialize arrays to store x and y positions
-% x_positions_232 = [];
-% y_positions_232 = [];
-% 
-% % Loop through each message and extract positions
-% for i = 1:length(all_msgs)
-%     % Access the Pose message
-%     pose = all_msgs{i}.pose.position;
-%     orientation = all_msgs{i}.pose.orientation;
-% 
-%     % Extract x and y positions
-%     x_positions_232(i) = pose.x;
-%     y_positions_232(i) = pose.y;
-%     %heading(i) = orientation.z
-% end
+messages = select(bag, 'Topic', '/cf232/pose');
+
+% Read all messages in one go
+all_msgs = readMessages(messages);
+
+% Initialize arrays to store x and y positions
+x_positions_232 = [];
+y_positions_232 = [];
+
+% Loop through each message and extract positions
+for i = 1:length(all_msgs)
+    % Access the Pose message
+    pose = all_msgs{i}.pose.position;
+    orientation = all_msgs{i}.pose.orientation;
+
+    % Extract x and y positions
+    x_positions_232(i) = pose.x;
+    y_positions_232(i) = pose.y;
+    %heading(i) = orientation.z
+end
 
 messages = select(bag, 'Topic', '/cf233/pose');
 
