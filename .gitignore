@@ -1,4 +1,15 @@
-build
-install
-log
-*.csv
+# ROS2 workspace artifacts
+/build/
+/install/
+/log/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Colcon metadata
+.colcon/
+
+# VSCode settings (if applicable)
+.vscode/
