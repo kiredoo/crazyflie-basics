@@ -28,4 +28,4 @@ To run experiments on real Crazyflie drones from Windows, follow the steps in **
 The control strategy implemented here is described in [Collective circular motion of multi-vehicle systems](https://www.sciencedirect.com/science/article/pii/S0005109808002951).
 
 ---
-Author: Sudhanshu Shankar
+Author: Sudhanshu Shankar & Isaac Lin
