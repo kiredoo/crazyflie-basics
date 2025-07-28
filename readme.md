@@ -6,7 +6,6 @@ This repository contains notebooks and utility scripts used at **MURO LAB** to s
 
 - `isaac_ws/cyclic.ipynb` - main simulation notebook demonstrating the cyclic pursuit controller and visualizing the results.
 - `isaac_ws/tuning_params.ipynb` - helper notebook for exploring controller parameters.
-- `isaac_ws/cyclic_pursuit_result_analysis.m` - MATLAB script for analysing logged ROS bag data.
 - `isaac_ws/moving_centroid.gif` - example animation of the controller in action.
 - `wsl2-tutorial.md` - guide for connecting the Crazyradio to WSL2 environments.
 
